@@ -1,0 +1,18 @@
+{
+    "operationName": "CreateMenuTemplateEntityStoreConfigurations",
+    "variables": {
+        "templateId": "",
+        "input": {
+            "categories": [
+                {
+                    "id": "",
+                    "templateEntityId": "",
+                    "storeId": "",
+                    "stationId": "",
+                    "includeChildren": true
+                }
+            ]
+        }
+    },
+    "query": "mutation CreateMenuTemplateEntityStoreConfigurations($templateId: String!, $input: CreateMenuTemplateEntityStoreConfigurationsInput!) {\n createMenuTemplateEntityStoreConfigurations(\n templateId: $templateId\n input: $input\n ) {\n stores(ids: []) {\n id\n __typename\n }\n __typename\n }\n}\n"
+}

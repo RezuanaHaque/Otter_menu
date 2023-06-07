@@ -1,0 +1,20 @@
+{
+    "id": "",
+    "templateEntityId": "",
+    "storeId": "",
+    "includeChildren": true,
+    "priceData": {
+        "price": {
+            "currencyCode": "CAD",
+            "units": 1,
+            "nanos": 0
+        },
+        "priceOverrides": []
+    },
+    "stationId": "",
+    "fulfillmentConfiguration": {
+        "directFulfillmentConfiguration": {
+            "stationId": ""
+        }
+    }
+}

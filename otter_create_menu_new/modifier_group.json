@@ -1,0 +1,33 @@
+{
+    "id": "",
+    "templateId": "",
+    "data": {
+        "menuEntity": {
+            "childrenIds": [],
+            "modifierGroup": {
+                "id": "",
+                "name": [
+                    {
+                        "locale": "en-US",
+                        "value": ""
+                    }
+                ],
+                "description": [
+                    {
+                        "locale": "en-US",
+                        "value": ""
+                    }
+                ],
+                "selectionData": {
+                    "maximumNumberOfChoices": 1,
+                    "minimumNumberOfChoices": 1
+                },
+                "serviceVisibility": {
+                    "serviceSlugs": [],
+                    "include": false
+                }
+            },
+            "parentsToAdd": []
+        }
+    }
+}

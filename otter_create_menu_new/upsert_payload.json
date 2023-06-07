@@ -1,0 +1,70 @@
+{
+    "operationName": "UpsertMenuTemplateEntityAndStoreConfigurations",
+    "variables": {
+        "upsertOrganizationSkusInput": {
+            "inputs": []
+        },
+        "createMenuTemplateEntitiesInput": {
+            "templateEntities": [
+                {
+                    "id": "2357d018-3534-4cd5-ba2d-bbbc62cba18a",
+                    "templateId": "12a5db47-90c6-431a-a6e4-863970b79d8f",
+                    "data": {
+                        "menuEntity": {
+                            "childrenIds": [],
+                            "modifierGroup": {
+                                "id": "2357d018-3534-4cd5-ba2d-bbbc62cba18a",
+                                "name": [
+                                    {
+                                        "locale": "en",
+                                        "value": "a"
+                                    }
+                                ],
+                                "description": [
+                                    {
+                                        "locale": "en",
+                                        "value": ""
+                                    }
+                                ],
+                                "selectionData": {
+                                    "maximumNumberOfChoices": 1,
+                                    "minimumNumberOfChoices": 1,
+                                    "maxPerModifierSelectionQuantity": 0
+                                },
+                                "serviceVisibility": {
+                                    "serviceSlugs": [],
+                                    "include": false
+                                }
+                            },
+                            "parentsToAdd": []
+                        }
+                    }
+                }
+            ]
+        },
+        "updateMenuTemplateEntitiesInput": {
+            "templateEntities": []
+        },
+        "templateEntityIdsToDelete": [],
+        "storeConfigsToDelete": [],
+        "createMenuTemplateEntityStoreConfigurationsInput": {
+            "items": [],
+            "modifierGroups": [
+                {
+                    "id": "0664c2e6-341d-4704-8c26-1f7006cce1d6",
+                    "templateEntityId": "2357d018-3534-4cd5-ba2d-bbbc62cba18a",
+                    "storeId": "32ececed-4e07-43ff-ac45-b5a699d3e93e",
+                    "includeChildren": false
+                }
+            ]
+        },
+        "updateMenuTemplateEntityStoreConfigurationsInput": {
+            "items": []
+        },
+        "bulkUpdateFulfillmentItemDataInput": {
+            "inputs": []
+        },
+        "templateId": "12a5db47-90c6-431a-a6e4-863970b79d8f"
+    },
+    "query": "mutation UpsertMenuTemplateEntityAndStoreConfigurations($upsertOrganizationSkusInput: UpsertOrganizationSkusInput! = {inputs: []}, $templateId: String!, $createMenuTemplateEntitiesInput: CreateMenuTemplateEntitiesInput! = {templateEntities: []}, $updateMenuTemplateEntitiesInput: UpdateMenuTemplateEntitiesInput! = {templateEntities: []}, $templateEntityIdsToDelete: [String!]! = [], $storeConfigsToDelete: [MenuEntityStoreConfigurationSelectorInput!]! = [], $createMenuTemplateEntityStoreConfigurationsInput: CreateMenuTemplateEntityStoreConfigurationsInput! = {}, $updateMenuTemplateEntityStoreConfigurationsInput: UpdateMenuTemplateEntityStoreConfigurationsInput! = {}, $bulkUpdateFulfillmentItemDataInput: BulkUpdateFulfillmentItemDataInput! = {inputs: []}) {\n  upsertOrganizationSkus(input: $upsertOrganizationSkusInput) {\n    __typename\n  }\n  createMenuTemplateEntities(input: $createMenuTemplateEntitiesInput) {\n    __typename\n  }\n  updateMenuTemplateEntities(input: $updateMenuTemplateEntitiesInput) {\n    __typename\n    workflowId\n  }\n  deleteMenuTemplateEntities(\n    templateId: $templateId\n    ids: $templateEntityIdsToDelete\n  ) {\n    __typename\n  }\n  deleteMenuTemplateEntityStoreConfigurations(\n    templateId: $templateId\n    input: {entities: $storeConfigsToDelete}\n  ) {\n    __typename\n  }\n  createMenuTemplateEntityStoreConfigurations(\n    templateId: $templateId\n    input: $createMenuTemplateEntityStoreConfigurationsInput\n  ) {\n    __typename\n  }\n  updateMenuTemplateEntityStoreConfigurations(\n    templateId: $templateId\n    input: $updateMenuTemplateEntityStoreConfigurationsInput\n  ) {\n    __typename\n  }\n  bulkUpdateFulfillmentItemData(input: $bulkUpdateFulfillmentItemDataInput) {\n    __typename\n  }\n}\n"
+}

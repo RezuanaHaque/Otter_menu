@@ -1,0 +1,10 @@
+{
+    "customerItemStoreConfigurationAndStoreId": {
+        "entityId": "",
+        "owningEntityId": ""
+    },
+    "fulfillmentItemData": {
+        "name": "",
+        "stationId": ""
+    }
+}

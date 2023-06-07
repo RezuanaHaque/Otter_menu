@@ -1,0 +1,8 @@
+{
+    "operationName": "DeleteMenuTemplateEntities",
+    "variables": {
+        "templateId": "",
+        "ids": []
+    },
+    "query": "mutation DeleteMenuTemplateEntities($templateId: String!, $ids: [String!]!) {\n  deleteMenuTemplateEntities(templateId: $templateId, ids: $ids) {\n    ids\n    __typename\n  }\n}\n"
+}

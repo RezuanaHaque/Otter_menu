@@ -1,0 +1,18 @@
+{
+    "id": "",
+    "stationId": "",
+    "storeId": "",
+    "priceData": {
+        "price": {
+            "units": 1,
+            "nanos": 0,
+            "currencyCode": "CAD"
+        },
+        "priceOverrides": []
+    },
+    "fulfillmentConfiguration": {
+        "directFulfillmentConfiguration": {
+            "stationId": ""
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "startUpload": {
+    "operationName": "StartMenuTemplatePhotoUploads",
+    "variables": {
+      "input": {
+        "inputs": [
+          {
+            "brandId": "",
+            "fileId": "",
+            "fileName": "",
+            "fileType": "JPG"
+          }
+        ]
+      }
+    },
+    "query": "mutation StartMenuTemplatePhotoUploads($input: StartMenuPhotoUploadsInput!) {\n  startMenuTemplatePhotoUploads(input: $input) {\n    responses {\n      fileId\n      photoUploadUrl\n      __typename\n    }\n    __typename\n  }\n}\n"
+  },
+  "endUpload": {
+    "operationName": "FinishMenuTemplatePhotoUploads",
+    "variables": {
+      "input": {
+        "inputs": [
+          {
+            "brandId": "",
+            "fileId": "",
+            "ofoAffinityTags": [],
+            "itemAndTemplateIds": []
+          }
+        ]
+      }
+    },
+    "query": "mutation FinishMenuTemplatePhotoUploads($input: FinishMenuTemplateEntityPhotoUploadsInput!) {\n  finishMenuTemplateEntityPhotoUploads(input: $input) {\n    photos {\n      id\n      fileName\n      fileType\n      photoUrl\n      sizeBytes\n      photoWidth\n      photoHeight\n      thumbnailUrl\n      ofoAffinityTags\n      photoServiceFileId\n      __typename\n    }\n    mergedDuplicates {\n      fileId\n      requestedFileIds\n      __typename\n    }\n    __typename\n  }\n}\n"
+  }
+}

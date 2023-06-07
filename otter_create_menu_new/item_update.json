@@ -1,0 +1,46 @@
+{
+    "id": "",
+    "templateId": "",
+    "data": {
+        "menuEntity": {
+            "childrenIds": [],
+            "attachedEntityIds": [],
+            "item": {
+                "id": "",
+                "name": [
+                    {
+                        "locale": "en-US",
+                        "value": ""
+                    }
+                ],
+                "description": [
+                    {
+                        "locale": "en-US",
+                        "value": ""
+                    }
+                ],
+                "priceData": {
+                    "price": {
+                        "units": 1,
+                        "nanos": 0,
+                        "currencyCode": "CAD"
+                    },
+                    "priceOverrides": []
+                },
+                "skuId": "",
+                "itemFulfillmentType": "ITEM_FULFILLMENT_TYPE_INVENTORY",
+                "serviceVisibility": {
+                    "serviceSlugs": [],
+                    "include": false
+                },
+                "printConfigs": {
+                    "labelPrintConfig": {
+                        "empty": true
+                    }
+                }
+            },
+            "parentsToAdd": [],
+            "parentsToRemove": []
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "operationName": "DeleteMenuTemplatePhotos",
+    "variables": {
+        "input": {
+            "inputs": [
+                {
+                    "brandId": "",
+                    "photoId": ""
+                }
+            ]
+        }
+    },
+    "query": "mutation DeleteMenuTemplatePhotos($input: DeleteMenuPhotosInput!) {\n deleteMenuTemplatePhotos(input: $input) {\n success\n __typename\n }\n}\n"
+}

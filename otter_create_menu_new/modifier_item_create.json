@@ -1,0 +1,33 @@
+{
+    "id": "",
+    "templateId": "",
+    "data": {
+        "menuEntity": {
+            "attachedEntityIds": [],
+            "item": {
+                "id": "",
+                "name": [
+                    {
+                        "locale": "en-US",
+                        "value": ""
+                    }
+                ],
+                "description": [
+                    {
+                        "locale": "en-US",
+                        "value": ""
+                    }
+                ],
+                "priceData": {
+                    "price": {
+                        "currencyCode": "CAD",
+                        "units": 0,
+                        "nanos": 0
+                    },
+                    "priceOverrides": []
+                },
+                "skuId": ""
+            }
+        }
+    }
+}
