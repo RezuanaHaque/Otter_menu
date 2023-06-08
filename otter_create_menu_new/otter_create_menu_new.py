@@ -17,6 +17,7 @@ from ggdriveapi.ggsheetsapi import GoogleSheets
 
 class Automation:
     imageUuid = '0'
+
     def __init__(self):
         self.driveApi = DriveAPI()
 
@@ -25,8 +26,8 @@ class Automation:
         os.makedirs("tmp/google drive download", exist_ok=True)
         print('enter the url of the google sheets you want to process:')
         while True:
-            #             # x = input()
-            x = 'https://docs.google.com/spreadsheets/d/1SvS8ttP4CmT3FdXndZFpry5QKAQ2YZtx-_5jjeADnbI/edit#gid=623556071'
+            x = input()
+            # x = 'https://docs.google.com/spreadsheets/d/1SvS8ttP4CmT3FdXndZFpry5QKAQ2YZtx-_5jjeADnbI/edit#gid=623556071'
             if len(x.split('/')) < 2:
                 print('invalid url, please enter again:')
                 continue
@@ -41,8 +42,8 @@ class Automation:
 
         print('enter the virtual brand number you want to process:')
         while True:
-            # self.vNum = input()
-            self.vNum = '1'
+            self.vNum = input()
+            # self.vNum = '1'
             try:
                 self.vName = self.sheet.getCell(3, 'V{}_Name'.format(self.vNum))
             except ValueError:
@@ -55,25 +56,27 @@ class Automation:
         self.startRow = 4
         print('enter the Otter url of the menu:')
         while True:
-            # x = input()
-            x = 'https://manager.tryotter.com/menus/brand/12a5db47-90c6-431a-a6e4-863970b79d8f'
+            x = input()
+            # x = 'https://manager.tryotter.com/menus/brand/12a5db47-90c6-431a-a6e4-863970b79d8f'
             if x:
                 self.menuUrl = x
                 break
         # self.menuUrl = 'https://manager.tryotter.com/menus/brand/1641853f-40ee-49aa-8890-d87cdcf47d16'
 
         print(
-            'What fields do you want to update if a product already exists? 1: image; 2: addon; 3: the rest. e.g. "1,3". Enter nothing to skip existing products.')
+            # 'What fields do you want to update if a product already exists? 1: image; 2: addon; 3: the rest. e.g. "1,3". Enter nothing to skip existing products.')
+            'What fields do you want to update if a product already exists? 1: image; 2. rest. e.g. "1,2". Enter nothing to skip existing products.')
+
         while True:
-            # x = input()
-            x = '1'
+            x = input()
+            # x = '3'
             self.updateImage, self.updateAddon, self.updateRest = False, False, False
             try:
                 for choice in x.split(','):
                     if choice == '1':
                         self.updateImage = True
-                    if choice == '2':
-                        self.updateAddon = True
+                    # if choice == '2':
+                    #     self.updateAddon = True
                     if choice == '3':
                         self.updateRest = True
                 break
@@ -126,7 +129,7 @@ class Automation:
             category = self.sheet.getCell(row, 'V{}_category'.format(self.vNum))
             imageUrl = self.sheet.getCell(row, 'V{}_image'.format(self.vNum))
             price = self.sheet.getCell(row, 'virtual price')
-            addons = self.sheet.getCell(row, 'original add_on')
+            # addons = self.sheet.getCell(row, 'original add_on')
 
             categoryUuids = []
 
