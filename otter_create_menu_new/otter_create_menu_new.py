@@ -129,7 +129,7 @@ class Automation:
             category = self.sheet.getCell(row, 'V{}_category'.format(self.vNum))
             imageUrl = self.sheet.getCell(row, 'V{}_image'.format(self.vNum))
             price = self.sheet.getCell(row, 'virtual price')
-            # addons = self.sheet.getCell(row, 'original add_on')
+            addons = self.sheet.getCell(row, 'New Image URL ')
 
             categoryUuids = []
 
@@ -402,6 +402,7 @@ class Automation:
 
     def createItem(self, name, imageUuid, description, price, categoryUuids, modifierGroupUuids):
         with open("upsert_payload.json", "r") as f:
+            # for modifier
             payload = json.load(f)
 
         # print(payload)

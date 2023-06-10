@@ -1,37 +1,43 @@
 {
-    "operationName": "CreateMenuTemplateEntities",
-    "variables": {
-        "templateId": "12a5db47-90c6-431a-a6e4-863970b79d8f",
-        "input": {
-            "templateEntities": [
-                {
-                    "id": "d1f2e595-2bb2-4d5c-bfb7-55f3359ad6ea",
-                    "templateId": "12a5db47-90c6-431a-a6e4-863970b79d8f",
-                    "data": {
-                        "menuEntity": {
-                            "category": {
-                                "id": "d1f2e595-2bb2-4d5c-bfb7-55f3359ad6ea",
-                                "name": [
-                                    {
-                                        "locale": "en",
-                                        "value": "f"
-                                    }
-                                ],
-                                "description": [
-                                    {
-                                        "locale": "en",
-                                        "value": ""
-                                    }
-                                ],
-                                "serviceVisibility": null
-                            },
-                            "childrenIds": [],
-                            "parentsToAdd": []
-                        }
-                    }
+  "operationName": "CreateMenuTemplateEntities",
+  "variables": {
+    "templateId": "",
+    "input": {
+      "templateEntities": [
+        {
+          "id": "",
+          "templateId": "",
+          "data": {
+            "menuEntity": {
+              "category": {
+                "id": "",
+                "name": [
+                  {
+                    "locale": "zh-CN",
+                    "value": ""
+                  }
+                ],
+                "description": [
+                  {
+                    "locale": "zh-CN",
+                    "value": ""
+                  }
+                ],
+                "serviceVisibility": {
+                  "serviceSlugs": [],
+                  "include": false
                 }
-            ]
+              },
+              "childrenIds": [],
+              "parentsToAdd": [
+                "34572908-1856-4353-b06a-2402cd76b6db"
+              ]
+            }
+          }
         }
-    },
-    "query": "mutation CreateMenuTemplateEntities($templateId: String!, $input: CreateMenuTemplateEntitiesInput!) {\n  createMenuTemplateEntities(templateId: $templateId, input: $input) {\n    menuTemplateEntities {\n      id\n      __typename\n    }\n    __typename\n  }\n}\n"
+      ]
+    }
+  },
+  "query": "mutation CreateMenuTemplateEntities($templateId: String!, $input: CreateMenuTemplateEntitiesInput!) {\n  createMenuTemplateEntities(templateId: $templateId, input: $input) {\n    menuTemplateEntities {\n      id\n      __typename\n    }\n    __typename\n  }\n}\n"
 }
+
