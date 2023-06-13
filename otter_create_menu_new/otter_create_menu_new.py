@@ -7,11 +7,7 @@ import requests
 import json
 import uuid
 import logging
-# sys.path.append('../ggdriveapi')
-# from ggdriveapi import DriveAPI
-# from ggdriveapi.ggsheetsapi import GoogleSheets
 from ggdriveapi.ggdriveapi import DriveAPI
-# from ggdriveapi.ggsheetsapi import GoogleSheets
 from ggdriveapi.ggsheetsapi import GoogleSheets
 
 
@@ -75,8 +71,8 @@ class Automation:
                 for choice in x.split(','):
                     if choice == '1':
                         self.updateImage = True
-                    # if choice == '2':
-                    #     self.updateAddon = True
+                    if choice == '2':
+                        self.updateAddon = True
                     if choice == '3':
                         self.updateRest = True
                 break
@@ -93,7 +89,7 @@ class Automation:
         }
         res = self.req.post('https://api.tryotter.com/users/sign_in', json=body, headers=headers)
         # print(res.text)
-        # print(res.status_code)
+        print(res.status_code)
         # print(res.text)
 
         token = res.json()['accessToken']
@@ -129,6 +125,7 @@ class Automation:
             category = self.sheet.getCell(row, 'V{}_category'.format(self.vNum))
             imageUrl = self.sheet.getCell(row, 'V{}_image'.format(self.vNum))
             price = self.sheet.getCell(row, 'virtual price')
+            # addons = self.sheet.getCell(row, 'original add_on')
             addons = self.sheet.getCell(row, 'New Image URL ')
 
             categoryUuids = []
@@ -241,12 +238,14 @@ class Automation:
         with open("menu_summary_payload.json", "r") as f:
             summaryPayload = json.load(f)
         summaryPayload["variables"]["templateId"] = self.menuTemplateUuid
-        # print('res', summaryPayload["variables"]["templateId"])
+        print('res', summaryPayload["variables"]["templateId"])
+
 
         res = self.req.post("https://api.tryotter.com/graphql", headers=self.headers, json=summaryPayload)
         summary = res.json()
         # print('res2', summary)
-        # print('res2', res.text)
+        print('res2', res.text)
+        print('res2', res.status_code)
         self.brandUuid = res.json()["data"]["menuTemplate"]["parentEntities"][0]["id"]
         stores = res.json()["data"]["menuTemplate"]["stores"]
         # print('stores',stores)
